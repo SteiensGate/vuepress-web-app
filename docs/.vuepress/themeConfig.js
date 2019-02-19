@@ -1,23 +1,23 @@
 const helper = require('./../helper/')
 
 module.exports = {
-  repo: 'nicejade/vuepress-web-app',
+  repo: 'SteiensGate/vuepress-web-app',
   editLinks: false,
   docsDir: './dist',
   algolia: {
-    apiKey: '6290673b2059b2332d64c13d248877ad',
-    indexName: 'lovejade',
+    apiKey: 'd27b4f3d5996aaba8b141e383ef6340a',
+    indexName: 'prod_JavaBlog',
     inputSelector: '',
     debug: false
   },
   comment: {
-    clientID: '047582532241759ff101',
-    clientSecret: 'fd8193330fb5748ccaec4d97b7495d7d7e175021',
+    clientID: '404a8bb0a2635bb8351c',
+    clientSecret: 'b2360e85d6ad8f69bd64ced134782d7a16b5af88',
     repo: 'vuepress-web-app',
-    owner: 'nicejade',
-    admin: ['nicejade'],
+    owner: 'SteiensGate',
+    admin: ['SteiensGate'],
     perPage: 5,
-    distractionFreeMode: false  // Facebook-like distraction free mode
+    distractionFreeMode: false // Facebook-like distraction free mode
   },
   locales: {
     '/': {
@@ -27,25 +27,39 @@ module.exports = {
       lastUpdated: '上次更新',
       nav: [
         {
-          text: '博客',
-          link: '/zh/blog/',
+          text: '首页',
+          link: '/blog/'
         },
         {
-          text: '文章',
-          link: '/zh/article/'
+          text: 'Java基础',
+          link: '/java/'
         },
         {
-          text: '应用',
-          link: '/zh/application/'
+          text: 'Java虚拟机',
+          link: '/jvm/'
         },
         {
-          text: '招聘',
-          link: '/zh/recruit/'
+          text: '微服务',
+          link: '/micro-service/'
+        },
+        {
+          text: '更多',
+          items: [
+            { text: '设计模式', link: '/design-pattern/' },
+            { text: '数据结构', link: '/data-structure/' },
+            { text: '网络基础', link: '/network/' },
+            { text: 'LeetCode', link: '/leetcode/' }
+          ]
         }
       ],
       sidebar: {
-        '/zh/blog/': helper.utils.genSidebarConfig('轩帅の博客', './docs/zh/blog/', false),
-        '/zh/article/': helper.utils.genSidebarConfig('最新文章', './docs/zh/article/', false)
+        '/blog/': helper.utils.genSidebarConfig('', './docs/blog/', false),
+        '/data-structure/': helper.utils.genSidebarConfig('', './docs/data-structure/', false),
+        '/java/': helper.utils.genSidebarConfig('', './docs/java/', false),
+        '/jvm/': helper.utils.genSidebarConfig('', './docs/jvm/', false),
+        '/leetcode/': helper.utils.genSidebarConfig('', './docs/leetcode/', false),
+        '/micro-service/': helper.utils.genSidebarConfig('', './docs/micro-service/', false),
+        '/network/': helper.utils.genSidebarConfig('', './docs/network/', false)
       }
     },
     '/en/': {
